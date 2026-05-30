@@ -1,0 +1,65 @@
+# environment
+domain: antmaze
+env: antmaze-medium-play-v2
+fake_label: true
+modality: 'state'  # state/pixel
+structure: 'transformer1' # mlp/transformer1/transformer2/transformer3/DPR/C-DPR
+supple: 'transformer'
+clip_action: 0.999  # only d4rl
+stack: false  # stack frame in pixel benchmark, only atari
+
+# learning
+ensemble_size: 1
+batch_size: 256
+n_epochs: 100
+n_iter: 50
+num_query: 2000
+len_query: 200
+beta: 0.1
+data_dir: /path
+loss_type: 'disc'
+
+# misc
+seed: 888
+exp_name: transformer
+save_model: true
+use_wandb: false
+wandb_project: Uni-RLHF
+wandb_entity: xiguapi
+
+
+# transformer structure
+d_model: 256
+nhead: 4
+num_layers: 1
+max_seq_len: 200
+
+# diffusion
+diff_episode_len: 200
+diff_embed_dim: 128
+dim_mults: [1, 2, 4, 8]
+n_diffusion_steps: 1000
+dropout: 0.25
+diff_ema_start_epoch: 20
+guidance_scale: 1.2
+diff_lr: 1e-4
+diff_max_iters: 300
+diff_num_steps_per_iter: 1000
+diff_batch_size: 50
+ftb_num: 5
+
+
+# DPR
+disc_ddpm_n_timesteps: 10 # 2,5,10,100
+disc_ddpm_beta_schedule: "linear" # ,"cosine","vp"
+disc_hid_dim: 128
+disc_lr: 0.0006
+disc_momentum: 0.9
+disc_clamp_magnitude: 0
+
+# C-DPR
+n_steps: 10
+num_units: 256
+device: "cuda:0"
+lable_dim: 10
+discrim_depth: 4
