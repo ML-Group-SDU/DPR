@@ -1,5 +1,8 @@
 # DPR: 
-  
+This repository contains the source code for "Diffusion classifier-driven reward for offline preference-based reinforcement learning".
+
+Accepted at **Pattern Recognition**.
+
 This code is based on <a href="https://github.com/pickxiguapi/Clean-Offline-RLHF">[ Clean-Offline-RLHF]</a>.
 
 ## Getting Started
@@ -38,3 +41,14 @@ This repo relies on the following existing codebases:
 
 - The Offline RLHF framework on <a href="https://github.com/pickxiguapi/Clean-Offline-RLHF">Clean-Offline-RLHF</a>
 - The diffusion model variant based on <a href="https://github.com/NVlabs/DRAIL">DiffAIL</a> and <a href="">DRAIL</a>
+
+## Citation
+If you use this code for your research, please consider citing the paper:
+```bash
+@article{PANG2026DPR,
+title = {Diffusion classifier-driven reward for offline preference-based reinforcement learning},
+journal = {Pattern Recognition},
+year = {2026}，
+author = {Teng Pang and Bingzheng Wang and Guoqiang Wu and Yilong Yin},
+}
+```
